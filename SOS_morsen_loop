@@ -1,0 +1,34 @@
+int interne_led = 13;
+
+void setup()
+{
+pinMode(interne_led, OUTPUT);
+}
+
+
+void an_aus(int wie_lange)
+{
+digitalWrite(interne_led, HIGH);
+delay(wie_lange);
+digitalWrite(interne_led, LOW);
+delay(wie_lange);
+}
+
+void loop()
+{
+// S
+an_aus(200); an_aus(200); an_aus(200);
+delay(300); // Kurze Pause
+
+// O
+an_aus(500); an_aus(500); an_aus(500);
+delay(300); // Kurze Pause
+
+// S
+an_aus(200); an_aus(200); an_aus(200);
+delay(300); // Kurze Pause
+
+// Warte bis Neustart 3 Sekunden
+delay(3000);
+}
+
